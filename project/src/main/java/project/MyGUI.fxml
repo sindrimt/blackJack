@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ap" prefHeight="579.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.MyController">
+   <children>
+      <Pane fx:id="BGPane" prefHeight="579.0" prefWidth="679.0" />
+      <Button fx:id="playButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" disable="true" layoutX="295.0" layoutY="504.0" mnemonicParsing="false" onAction="#clickPlay" prefHeight="49.0" prefWidth="90.0" text="Play" textAlignment="CENTER" textFill="#5b5353">
+         <font>
+            <Font name="Andale Mono" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="hitButton" disable="true" layoutX="426.0" layoutY="516.0" mnemonicParsing="false" onAction="#clickHit" prefHeight="25.0" prefWidth="66.0" text="Hit">
+         <font>
+            <Font name="Andale Mono" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="stayButton" disable="true" layoutX="189.0" layoutY="516.0" mnemonicParsing="false" onAction="#clickStay" prefHeight="25.0" prefWidth="66.0" text="Stay">
+         <font>
+            <Font name="Andale Mono" size="13.0" />
+         </font>
+      </Button>
+      <Text fx:id="playerText" fill="WHITE" layoutX="239.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your score: xx" textAlignment="CENTER" wrappingWidth="200.67333984375">
+         <font>
+            <Font name="Andale Mono" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="dealerText" fill="WHITE" layoutX="237.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dealers score: xx" textAlignment="CENTER" wrappingWidth="206.67333984375">
+         <font>
+            <Font name="Andale Mono" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <HBox fx:id="cardBox" layoutX="35.0" layoutY="353.0" prefHeight="100.0" prefWidth="597.0" spacing="10.0" />
+      <HBox fx:id="dcardBox" layoutX="35.0" layoutY="77.0" prefHeight="100.0" prefWidth="597.0" spacing="10.0" />
+      <Button fx:id="playAgain" layoutX="35.0" layoutY="28.0" mnemonicParsing="false" onAction="#clickRestart" text="Play again">
+         <font>
+            <Font name="Andale Mono" size="12.0" />
+         </font></Button>
+      <Spinner fx:id="spinner" editable="true" layoutX="258.0" layoutY="473.0" prefHeight="9.0" prefWidth="121.0">
+      <valueFactory>
+       <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="20" max="9999" min="0" />
+    </valueFactory>
+      </Spinner>
+      	
+      <Button fx:id="okButton" layoutX="381.0" layoutY="473.0" mnemonicParsing="false" onAction="#clickOk" prefHeight="27.0" prefWidth="36.0" text="Ok">
+         <font>
+            <Font name="Andale Mono" size="12.0" />
+         </font>
+      </Button>
+      <Text fx:id="currentBet" fill="WHITE" layoutX="74.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Bet:" textAlignment="CENTER" wrappingWidth="165.50442504882812">
+         <font>
+            <Font name="Andale Mono" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="totalCash" fill="WHITE" layoutX="461.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Cash:" textAlignment="CENTER" wrappingWidth="121.0">
+         <font>
+            <Font name="Andale Mono" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Pane fx:id="welcomePane" prefHeight="579.0" prefWidth="679.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="580.0" fitWidth="679.0" opacity="0.72" pickOnBounds="true">
+               <image>
+                  <Image url="images/goahed.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="fortsettSpill" layoutX="298.0" layoutY="427.0" mnemonicParsing="false" onAction="#clickFortsettSpill" prefHeight="35.0" prefWidth="94.0" text="Fortsett spill" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Button fx:id="nyttSpill" layoutX="306.0" layoutY="286.0" mnemonicParsing="false" onAction="#clickNyttSpill" prefHeight="35.0" prefWidth="73.0" text="Nytt spill">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></Button>
+            <Text fill="WHITE" layoutX="211.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen!" textAlignment="CENTER" wrappingWidth="265.59975601085887">
+               <font>
+                  <Font name="Andale Mono" size="44.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="239.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hvis du vil fortsette spill, trykk her:" textAlignment="CENTER" wrappingWidth="209.159735966597">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="241.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hvis du vil starte nytt spill, trykk her:" textAlignment="CENTER" wrappingWidth="209.159735966597">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+         </children>
+      </Pane>
+      <Text fx:id="gameText" fill="WHITE" layoutX="179.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="324.447512295513">
+         <font>
+            <Font name="Andale Mono" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>
